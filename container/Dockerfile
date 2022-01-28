@@ -32,7 +32,7 @@ RUN apt-get -yq update \
   # Get, configure and install imagemagick
   && curl -sSL https://imagemagick.org/download/releases/ImageMagick-$COMPILE_VERSION_IMAGEMAGICK.tar.bz2 | tar jx \
   && cd ImageMagick-$COMPILE_VERSION_IMAGEMAGICK \
-  && ./configure --prefix=/usr/src/imagemagick --with-heic=yes --with-webp=yes --with-openexr=no --with-x=no --disable-docs \
+  && ./configure --prefix=/usr/src/imagemagick --with-avif=yes --with-webp=yes --with-openexr=no --with-x=no --disable-docs \
   && make -j$(nproc) \
   && make install \
   # Copy shared libraries just compiled
